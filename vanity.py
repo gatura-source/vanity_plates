@@ -36,12 +36,14 @@ def check_plate(stack):
         else:
             continue
     return True
-stack = list(input('Enter your plate here:: '))
-for c in stack:
-    if c in ALPHA:
-        c = c.upper()
+stack = []
+inp = input('Enter your plate here:: ')
+for c in inp:
+    if c in string.ascii_lowercase:
+        stack.append(c.upper())
     else:
-        c = c
+        stack.append(c)
+print(f"NOTE: all chars are converted to uppercase\n\nInput:: {stack}")
 ops = {1: check_len,
        3: op_check_first_two,
        5: check_plate,
