@@ -11,9 +11,7 @@ SPECIAL_CHARS = string.punctuation
 
 
 def check_len(stack):
-    if len(stack) > 6 or len(stack) < 2:
-        return False
-    return True
+    return not (len(stack) > 6 or len(stack) < 2)
 def op_check_first_two(stack):
     top_= stack.pop(0)
     next_top = stack.pop(0)
